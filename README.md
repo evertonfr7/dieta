@@ -1,24 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gerir Dieta 🍎
 
-## Getting Started
+Aplicação moderna para gerenciar sua dieta, alimentos, refeições e acompanhar seus macros nutricionais diários.
 
-First, run the development server:
+## Funcionalidades
+
+- 📅 **Diário**: Adicione o que você comeu e use IA (Google Gemini) para estimar automaticamente os macros nutricionais
+- 🍎 **Alimentos**: Crie e gerencie seus alimentos personalizados com valores nutricionais
+- 🍽️ **Refeições**: Combine vários alimentos para criar refeições completas
+- 📊 **Acompanhamento**: Visualize o total de macros do dia (calorias, proteínas, carboidratos, gorduras)
+
+## Tecnologias
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Google Gemini (IA para estimar macros)
+
+## Configuração
+
+1. Instale as dependências:
+
+```bash
+npm install
+```
+
+2. Configure a chave do Google Gemini em `.env.local` (grátis em [Google AI Studio](https://aistudio.google.com/apikey)):
+
+```bash
+GEMINI_API_KEY=sua-chave-gemini
+```
+
+3. Execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Como Usar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Estimador de Macros**: Na aba "Diário", digite o que você comeu (ex: "1 prato de arroz com feijão e frango grelhado") e clique em "Estimar" para obter os macros automaticamente via IA.
+
+2. **Criar Alimentos**: Na aba "Alimentos", crie alimentos personalizados com seus valores nutricionais. Você pode usar o botão "Estimar macros com IA" para preencher automaticamente.
+
+3. **Criar Refeições**: Na aba "Refeições", combine vários alimentos para criar refeições completas. Os macros são calculados automaticamente.
+
+4. **Adicionar ao Diário**: Você pode adicionar alimentos ou refeições criadas ao seu diário do dia, especificando a quantidade.
+
+Todos os dados são armazenados localmente no navegador (localStorage).
 
 ## Learn More
 
